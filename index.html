@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Peer to Peer</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Web Sockets</title>
+        <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+        <script src="cliente.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Web Sockets Basics</h1>
+            <h2>Implementacion de WebSockets con Node.js</h2>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">Mensajes del Servidor</label>
+                    <textarea id="mensajes" rows="10" cols="10" class="form-control"></textarea>
+                </div>                
+            </div>
+
+            <div class="row">
+                <div class="col sm-6">
+                    <form onSubmit="enviarTexto(event)">
+                        <label class="form-label">Texto a enviar</label>
+                        <input type="text" id="texto" name="texto" class="form-control" disabled="true"/>
+                    </form>
+                    <button type="submit" id="unirse" class="btn btn-primary mt-4" onclick="init(event)">Unirse</button>
+                    <button type="submit" id="desconectar" class="btn btn-primary mt-4" onclick="desconectar(event)">Desconectar</button>
+                </div>                    
+            </div>
+    </body>
+</html>
